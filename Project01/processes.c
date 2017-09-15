@@ -55,8 +55,8 @@ int main()
   //Create process fork and run process1 only if it's child process
   if ((pid1 = fork()) == 0)
   {
+    printf("\n"); //Just for formatting purposes
     process1();
-
   }
 
   //Create process fork and run process2 only if it's child process
@@ -85,10 +85,11 @@ int main()
 
   if(pid1 > 0 && pid2 > 0 && pid3 > 0 && pid4 > 0)
   {
-    printf(" Child process %d has ended\n", pid1);
-    printf(" Child process %d has ended\n", pid2);
-    printf(" Child process %d has ended\n", pid3);
-    printf(" Child process %d has ended\n", pid4);
+    printf("Child process %d has ended\n", pid1);
+    printf("Child process %d has ended\n", pid2);
+    printf("Child process %d has ended\n", pid3);
+    printf("Child process %d has ended\n", pid4);
+    printf("   \nSimulation has ended\n\n");
   }
 
   if (shmdt(total) == -1)
