@@ -1,7 +1,7 @@
 all: processes
 
 processes:
-	gcc processes.c -o processes
+	gcc -w processes.c -o processes
 
 clean:
 	rm -rf *o processes
