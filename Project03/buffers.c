@@ -105,7 +105,12 @@ int main()
   //Removes the shared memory
   shmctl(shmid, IPC_RMID, NULL);
 
+
   printf("   \nSimulation has ended\n\n");
+
+  //Terminate threads
+  pthread_exit(NULL);
+  
   return 0;
 }
 
